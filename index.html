@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/436d990d2f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="top-container">
+        <div class="cont-1">
+            <nav>
+                <img class="icon" src="images/icon.png" alt="icon-img">
+                <ul id="sidemenu">
+                    <li><a href="#top-container">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-sharp fa-regular fa-circle-xmark i1" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars i1" onclick="openmenu()"></i>
+
+            </nav>
+
+            <div class="cont-2">
+                <p>Front-end Web Developer</p>
+                <h1>Hi, I'm <span>Meenu</span><br> from India</h1>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!--------------about------------->
+    <div id="about">
+        <div class="cont-3">
+            <div class="row">
+                <div class="col-1">
+                    <img src="images/profile.png">
+                </div>
+                <div class="col-2">
+                    <h1>About Me</h1>
+                    <p>I am Meenu from Karnal, Haryana. I am a B.tech CSE(2020-2024) student at Guru Jambheshwar University of Science and Technology, Hisar. I aspire to be web developer and loves designing new websites.</p>
+
+                    <div class="titles">
+                        <p class="tabs active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tabs" onclick="opentab('experience')">Experience</p>
+                        <p class="tabs" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Front-end Web Developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Developer</span><br>8 months</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech CSE (2020-2024)</span><br>Guru Jambheshwar University of Science and Technology, Hisar, Haryana, India</li>
+                            <li><span>Senior Secondary</span><br>Pratap Public School, Jundla, Haryana, India</li>
+                            <li><span>Secondary</span><br>R.S Public Sr. Sec. School, Haryana, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------services---------------->
+    <div id="services">
+        <div class="cont-4">
+            <h1>My Services</h1>
+            <div class="service-1">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2> Web Designing</h2>
+                    <p>A Front-end Web Developer developing websites for users.</p>
+                    <a href="https://www.wix.com/blog/2021/05/web-design/">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--------------------Contacts-------------------->
+    <div id="Contact">
+        <div class="cont-5">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> meenunarwal935@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mini.narwal.39?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/meenunarwal_03?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/meenu-narwal-4724a6254"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Meenu-Narwal"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/my_cv.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"> Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © Meenu</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tabs");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoxC_AEw4_NLRMO8zPMiFM9W_u_j96mky6-Wq03S_0E8IzPmE0h_rmXtXoOkKCXk0gzA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 2500)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
